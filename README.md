@@ -5,9 +5,9 @@ First project in the Udacity [Full Stack Web Developer Nanodegree](https://www.u
 ## Project Requirements
 The main task of this project is a reporting tool that uses information from a database called news that contain three tables :
 
-1.The `authors table` includes information about the authors of articles.
-2.The `articles table` includes the articles themselves.
-3.The `log table includes` one entry for each time a user has accessed the site.
+1. The `authors table` includes information about the authors of articles.
+2. The `articles table` includes the articles themselves.
+3. The `log table includes` one entry for each time a user has accessed the site.
 
 The reporting tool should answer the following questions:
 
@@ -35,22 +35,21 @@ The project code requires the following software:
 
 ### Setup Project:
 
-1.Install Vagrant and VirtualBox, Please check [instructions to install the virtual machine](https://classroom.udacity.com/courses/ud197/lessons/3423258756/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0)
-2.Download or Clone this repository in the /vagrant directory You must finish step 1 first
+1. Install Vagrant and VirtualBox, Please check [instructions to install the virtual machine](https://classroom.udacity.com/courses/ud197/lessons/3423258756/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0)
+2. Download or Clone this repository in the /vagrant directory You must finish step 1 first
 
 ### Prepare the Software and Data
 
-1.The virtual machine from step 1
+1. The virtual machine from step 1
 If you need to bring the virtual machine back online with $ vagrant up. Then log into it with $ vagrant ssh
 
-2.Download the data from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
-
-	Unzip this file after downloading it. The file inside is called newsdata.sql.
-	To run the reporting tool, you'll need to load the site's data into your local database. To load the data, use the command
-	```psql -d news -f newsdata.sql```
+2. Download the data from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip).
+Unzip this file after downloading it. The file inside is called newsdata.sql.
+To run the reporting tool, you'll need to load the site's data into your local database. To load the data, use the command
+```psql -d news -f newsdata.sql```
 
 3.Creating views
-####collect		
+#### collect		
 This view is used to show the information about author_title,author_name,author_ID and he total view for each author
 
 ````sql
@@ -77,7 +76,7 @@ CREATE VIEW All_requests AS
 		   ORDER BY date(time);
 ````
 
-####error_requests
+#### error_requests
 This view show the total nymber of bad requests on the website
 
 ````sql
@@ -87,7 +86,7 @@ CREATE VIEW error_requests AS
 		   GROUP BY date(time) 
 		   ORDER BY date(time);
 ````
-####error_rate
+#### error_rate
 This view show the percentage of the bad requests 
 
 ````sql
