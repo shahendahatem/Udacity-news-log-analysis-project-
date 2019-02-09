@@ -19,7 +19,7 @@ The reporting tool should answer the following questions:
 
 * `logs_analysis.py` - The Python program that connects to the PostgreSQL database, executes the SQL queries and displays the results.
 * `README.md` - This read me file.
-* `logs_output.txt` - The text output of the `news_logs_analysis.py`
+* `logs_output.txt` - The text output of the `logs_analysis.py`
 
 ## How to Run the Program
 
